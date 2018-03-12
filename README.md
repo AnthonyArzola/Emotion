@@ -19,8 +19,8 @@ Sample app that takes a picture, sends it to Microsoft's [Face API](https://azur
 
 ## CocoaPod referenced
 
-* PromiseKit ~> 4.4
-* Alamofire ~> 4.5
+* [PromiseKit](https://cocoapods.org/pods/PromiseKit) ~> 4.4
+* [Alamofire](https://cocoapods.org/pods/Alamofire) ~> 4.5
 
 ## Features
 
