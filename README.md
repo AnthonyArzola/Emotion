@@ -3,7 +3,7 @@ Emotion Sample
 
 ![Emotion app icon](./Images/AppIcon@2x.png)
 
-Sample app that takes a picture, sends it to Microsoft's [Face API](https://azure.microsoft.com/en-us/services/cognitive-services/face/) to detect emotion and draws emoji to match.
+Sample Swift app that takes a picture, sends it to Microsoft's [Face API](https://azure.microsoft.com/en-us/services/cognitive-services/face/) to detect emotion and draws emoji to match.
 
 ## Getting Started
 
