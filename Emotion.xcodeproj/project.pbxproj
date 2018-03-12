@@ -17,10 +17,11 @@
 		3E3598232027EAC300E575C5 /* CameraButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3598222027EAC300E575C5 /* CameraButton.png */; };
 		3E552A32203AC62B00463EFE /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E552A31203AC62B00463EFE /* TransitionManager.swift */; };
 		3E552A34203ACB5500463EFE /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E552A33203ACB5500463EFE /* PresentationController.swift */; };
-		3E56301F2030239B0031382B /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E56301E2030239B0031382B /* Emotion.swift */; };
+		3E56301F2030239B0031382B /* Detect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E56301E2030239B0031382B /* Detect.swift */; };
 		3E5630212030246C0031382B /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5630202030246C0031382B /* Rectangle.swift */; };
-		3E5630232030260C0031382B /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5630222030260C0031382B /* Score.swift */; };
+		3E5630232030260C0031382B /* EmotionalScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5630222030260C0031382B /* EmotionalScore.swift */; };
 		3E9DD5DF203226DB00C9803F /* AnnotatedPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9DD5DE203226DB00C9803F /* AnnotatedPictureViewController.swift */; };
+		3EB07DF12055FC390019E8DF /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB07DF02055FC390019E8DF /* Attributes.swift */; };
 		3EC9EF8320390A2D00266D83 /* Settings@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EC9EF8020390A2C00266D83 /* Settings@3x.png */; };
 		3EC9EF8420390A2D00266D83 /* AppIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EC9EF8120390A2C00266D83 /* AppIcon@3x.png */; };
 		3EC9EF8520390A2D00266D83 /* Spotlight@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EC9EF8220390A2D00266D83 /* Spotlight@3x.png */; };
@@ -41,10 +42,11 @@
 		3E3598222027EAC300E575C5 /* CameraButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CameraButton.png; sourceTree = "<group>"; };
 		3E552A31203AC62B00463EFE /* TransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		3E552A33203ACB5500463EFE /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
-		3E56301E2030239B0031382B /* Emotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
+		3E56301E2030239B0031382B /* Detect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detect.swift; sourceTree = "<group>"; };
 		3E5630202030246C0031382B /* Rectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
-		3E5630222030260C0031382B /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		3E5630222030260C0031382B /* EmotionalScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalScore.swift; sourceTree = "<group>"; };
 		3E9DD5DE203226DB00C9803F /* AnnotatedPictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotatedPictureViewController.swift; sourceTree = "<group>"; };
+		3EB07DF02055FC390019E8DF /* Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
 		3EC9EF8020390A2C00266D83 /* Settings@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings@3x.png"; sourceTree = "<group>"; };
 		3EC9EF8120390A2C00266D83 /* AppIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon@3x.png"; sourceTree = "<group>"; };
 		3EC9EF8220390A2D00266D83 /* Spotlight@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spotlight@3x.png"; sourceTree = "<group>"; };
@@ -146,9 +148,10 @@
 		3E56301D203023640031382B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3E56301E2030239B0031382B /* Emotion.swift */,
+				3E56301E2030239B0031382B /* Detect.swift */,
 				3E5630202030246C0031382B /* Rectangle.swift */,
-				3E5630222030260C0031382B /* Score.swift */,
+				3E5630222030260C0031382B /* EmotionalScore.swift */,
+				3EB07DF02055FC390019E8DF /* Attributes.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -303,11 +306,12 @@
 			files = (
 				3E9DD5DF203226DB00C9803F /* AnnotatedPictureViewController.swift in Sources */,
 				3E3598122026F62F00E575C5 /* CameraViewController.swift in Sources */,
+				3EB07DF12055FC390019E8DF /* Attributes.swift in Sources */,
 				3E3598102026F62F00E575C5 /* AppDelegate.swift in Sources */,
 				3E552A32203AC62B00463EFE /* TransitionManager.swift in Sources */,
-				3E56301F2030239B0031382B /* Emotion.swift in Sources */,
+				3E56301F2030239B0031382B /* Detect.swift in Sources */,
 				3E5630212030246C0031382B /* Rectangle.swift in Sources */,
-				3E5630232030260C0031382B /* Score.swift in Sources */,
+				3E5630232030260C0031382B /* EmotionalScore.swift in Sources */,
 				3E552A34203ACB5500463EFE /* PresentationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

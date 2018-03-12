@@ -1,5 +1,5 @@
 //
-//  Emotion.swift
+//  Detect.swift
 //  Emotion
 //
 //  Created by Anthony Arzola on 2/10/18.
@@ -8,34 +8,43 @@
 
 import Foundation
 
-struct Emotion: Decodable {
+struct Detect: Decodable {
     
     // MARK: - Member variables
+    var FaceID: String
     var FaceRectangle: Rectangle
-    var Scores: Score
+    var FaceAttributes: Attributes
     
     private enum CodingKeys: String, CodingKey {
+        case FaceID = "faceId"
         case FaceRectangle = "faceRectangle"
-        case Scores = "scores"
+        case FaceAttributes = "faceAttributes"
     }
     
     // MARK: - Constructors
     init() {
+        self.FaceID = ""
         self.FaceRectangle = Rectangle()
-        self.Scores = Score()
+        self.FaceAttributes = Attributes()
     }
     
-    init(faceRectangle: Rectangle, scores: Score) {
+    init(faceId: String, faceRectangle: Rectangle, faceAttributes: Attributes) {
+        self.FaceID = faceId
         self.FaceRectangle = faceRectangle
-        self.Scores = scores
+        self.FaceAttributes = faceAttributes
     }
     
     // MARK: - Public methods
     func getProminentEmotion() -> (String, Double) {
-        let emotions : [String:Double] = ["Anger":Scores.Anger, "Contempt":Scores.Contempt,
-                                           "Disgust":Scores.Disgust, "Fear":Scores.Fear,
-                                           "Happiness":Scores.Happiness, "Neutral":Scores.Neutral,
-                                           "Sadness":Scores.Sadness, "Surprise":Scores.Surprise]
+        
+        let emotions : [String:Double] = ["Anger":FaceAttributes.EmoScore.Anger,
+                                          "Contempt":FaceAttributes.EmoScore.Contempt,
+                                          "Disgust":FaceAttributes.EmoScore.Disgust,
+                                          "Fear":FaceAttributes.EmoScore.Fear,
+                                          "Happiness":FaceAttributes.EmoScore.Happiness,
+                                          "Neutral":FaceAttributes.EmoScore.Neutral,
+                                          "Sadness":FaceAttributes.EmoScore.Sadness,
+                                          "Surprise":FaceAttributes.EmoScore.Surprise]
         
         let emotionTuple = emotions.max { $0.1 < $1.1}
         

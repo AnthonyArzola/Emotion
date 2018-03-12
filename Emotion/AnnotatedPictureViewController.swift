@@ -14,11 +14,11 @@ class AnnotatedPictureViewController: UIViewController {
     
     // MARK: - Member variables
     private let COGNATIVE_SERVICE_API_KEY = "YOUR_API_KEY"
-    private let COGNATIVE_SERVICE_API_ENDPOINT = "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize"
+    private let COGNATIVE_SERVICE_API_ENDPOINT = "https://WestCentralUS.api.Cognitive.Microsoft.com/face/v1.0/detect"
     private let CONTENT_TYPE_OCTET_STREAM = "application/octet-stream"
     
     var imageData: Data?
-    var emotion: [Emotion] = []
+    var emotion: [Detect] = []
     var initialTouchPoint: CGPoint = CGPoint(x: 0,y: 0)
     
     // MARK: - Outlets
@@ -85,7 +85,7 @@ class AnnotatedPictureViewController: UIViewController {
     }
     
     // MARK: - Private methods
-    private func getEmotions(image: UIImage) -> Promise<[Emotion]> {
+    private func getEmotions(image: UIImage) -> Promise<[Detect]> {
         
         return Promise { fufill, reject in
             
@@ -101,13 +101,13 @@ class AnnotatedPictureViewController: UIViewController {
                 "Content-Type": CONTENT_TYPE_OCTET_STREAM]
             
             Alamofire.upload(data,
-                             to: COGNATIVE_SERVICE_API_ENDPOINT,
+                             to: COGNATIVE_SERVICE_API_ENDPOINT + "?returnFaceAttributes=emotion",
                              method: .post,
                              headers: header).responseJSON { response in
                                 switch response.result {
                                 case .success:
                                     do {
-                                        let emotionalArray = try JSONDecoder().decode([Emotion].self, from: response.data!)
+                                        let emotionalArray = try JSONDecoder().decode([Detect].self, from: response.data!)
                                         fufill(emotionalArray)
                                     }
                                     catch {
@@ -120,7 +120,7 @@ class AnnotatedPictureViewController: UIViewController {
         }
     }
 
-    private func addRectanglesToImage(image: UIImage, emotions: [Emotion]) -> UIImage {
+    private func addRectanglesToImage(image: UIImage, emotions: [Detect]) -> UIImage {
         UIGraphicsBeginImageContext(image.size)
         
         image.draw(at: CGPoint.zero)
@@ -146,7 +146,7 @@ class AnnotatedPictureViewController: UIViewController {
         return modifiedImage!
     }
     
-    private func addLabelsToView(view: UIView, emotions: [Emotion]) {
+    private func addLabelsToView(view: UIView, emotions: [Detect]) {
         
         for emotion in emotions {
             let emotionTuple = emotion.getProminetEmotionWithEmoji()

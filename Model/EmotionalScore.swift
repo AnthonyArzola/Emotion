@@ -1,5 +1,5 @@
 //
-//  Score.swift
+//  Emotion.swift
 //  Emotion
 //
 //  Created by Anthony Arzola on 2/10/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Score: Decodable {
+struct EmotionalScore: Decodable {
     
     // MARK: - Data members
     var Anger: Double
@@ -33,7 +33,6 @@ struct Score: Decodable {
     
     // MARK: - Constructors
     init() {
-        
         self.Anger = 0.0
         self.Contempt = 0.0
         self.Disgust = 0.0
@@ -46,7 +45,6 @@ struct Score: Decodable {
     
     init(anger: Double, contempt: Double, disgust: Double, fear: Double,
          happiness: Double, neutral: Double, sadness: Double, surprise: Double) {
-        
         self.Anger = anger
         self.Contempt = contempt
         self.Disgust = disgust
