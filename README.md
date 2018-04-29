@@ -3,6 +3,8 @@ Emotion Sample
 
 ![Emotion app icon](./Images/AppIcon@2x.png)
 
+[![Swift Version][swift-image]][swift-url]
+
 Sample Swift app that takes a picture, sends it to Microsoft's [Face API](https://azure.microsoft.com/en-us/services/cognitive-services/face/) to detect emotion and draws emoji to match.
 
 ## Getting Started
@@ -33,7 +35,18 @@ Sample Swift app that takes a picture, sends it to Microsoft's [Face API](https:
 
 * Once picture is analyzed, it is annotated with rectangle and emoji.
 
-* Quickly dismiss annotated picture. Leverages `UIPresentationController`.
+* Quickly dismiss annotated picture by swiping down.
+
+## Leverages
+
+* AVFoundation
+  * AVCaptureSession
+  * AVCaptureVideoPreviewLayer
+  * AVCapturePhotoOutput
+* UIKit
+  * UITapGestureRecognizer
+  * UIVisualEffectView
+  * UIPresentationController / UIViewControllerTransitioningDelegate
 
 ## App Screenshots
 ![PiedPiper CEO](./Screenshots/Hendricks.png)
