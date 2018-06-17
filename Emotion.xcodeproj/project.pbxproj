@@ -22,12 +22,6 @@
 		3E5630232030260C0031382B /* EmotionalScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5630222030260C0031382B /* EmotionalScore.swift */; };
 		3E9DD5DF203226DB00C9803F /* AnnotatedPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9DD5DE203226DB00C9803F /* AnnotatedPictureViewController.swift */; };
 		3EB07DF12055FC390019E8DF /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB07DF02055FC390019E8DF /* Attributes.swift */; };
-		3EC9EF8320390A2D00266D83 /* Settings@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EC9EF8020390A2C00266D83 /* Settings@3x.png */; };
-		3EC9EF8420390A2D00266D83 /* AppIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EC9EF8120390A2C00266D83 /* AppIcon@3x.png */; };
-		3EC9EF8520390A2D00266D83 /* Spotlight@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EC9EF8220390A2D00266D83 /* Spotlight@3x.png */; };
-		3EFBB3472039207F00301649 /* AppIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBB3442039207E00301649 /* AppIcon@2x.png */; };
-		3EFBB3482039207F00301649 /* Settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBB3452039207F00301649 /* Settings@2x.png */; };
-		3EFBB3492039207F00301649 /* Spotlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EFBB3462039207F00301649 /* Spotlight@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,12 +41,6 @@
 		3E5630222030260C0031382B /* EmotionalScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionalScore.swift; sourceTree = "<group>"; };
 		3E9DD5DE203226DB00C9803F /* AnnotatedPictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotatedPictureViewController.swift; sourceTree = "<group>"; };
 		3EB07DF02055FC390019E8DF /* Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
-		3EC9EF8020390A2C00266D83 /* Settings@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings@3x.png"; sourceTree = "<group>"; };
-		3EC9EF8120390A2C00266D83 /* AppIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon@3x.png"; sourceTree = "<group>"; };
-		3EC9EF8220390A2D00266D83 /* Spotlight@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spotlight@3x.png"; sourceTree = "<group>"; };
-		3EFBB3442039207E00301649 /* AppIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon@2x.png"; sourceTree = "<group>"; };
-		3EFBB3452039207F00301649 /* Settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Settings@2x.png"; sourceTree = "<group>"; };
-		3EFBB3462039207F00301649 /* Spotlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Spotlight@2x.png"; sourceTree = "<group>"; };
 		A38EBD36044444EB56FC625B /* Pods-Emotion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emotion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Emotion/Pods-Emotion.debug.xcconfig"; sourceTree = "<group>"; };
 		C56C5F920CF2D6CC36E0E4FA /* Pods_Emotion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Emotion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D541E0357882210740D8438D /* Pods-Emotion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emotion.release.xcconfig"; path = "Pods/Target Support Files/Pods-Emotion/Pods-Emotion.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,13 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				3E22814E203D616800C76813 /* Close.png */,
-				3EFBB3442039207E00301649 /* AppIcon@2x.png */,
-				3EC9EF8120390A2C00266D83 /* AppIcon@3x.png */,
 				3E3598222027EAC300E575C5 /* CameraButton.png */,
-				3EFBB3452039207F00301649 /* Settings@2x.png */,
-				3EC9EF8020390A2C00266D83 /* Settings@3x.png */,
-				3EFBB3462039207F00301649 /* Spotlight@2x.png */,
-				3EC9EF8220390A2D00266D83 /* Spotlight@3x.png */,
 				3E24C17F20392418004893AD /* Images.xcassets */,
 			);
 			path = Images;
@@ -227,16 +209,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EC9EF8320390A2D00266D83 /* Settings@3x.png in Resources */,
 				3E24C18020392418004893AD /* Images.xcassets in Resources */,
-				3EFBB3492039207F00301649 /* Spotlight@2x.png in Resources */,
-				3EC9EF8520390A2D00266D83 /* Spotlight@3x.png in Resources */,
 				3E3598232027EAC300E575C5 /* CameraButton.png in Resources */,
-				3EC9EF8420390A2D00266D83 /* AppIcon@3x.png in Resources */,
 				3E35981A2026F62F00E575C5 /* LaunchScreen.storyboard in Resources */,
 				3E22814F203D616800C76813 /* Close.png in Resources */,
-				3EFBB3472039207F00301649 /* AppIcon@2x.png in Resources */,
-				3EFBB3482039207F00301649 /* Settings@2x.png in Resources */,
 				3E3598152026F62F00E575C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
