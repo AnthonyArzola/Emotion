@@ -25,7 +25,11 @@ platform :ios do
 
   desc "Build project"
   lane :build do
-    xcbuild(archive: false, workspace: "Emotion.xcworkspace", scheme: "Emotion")
+    xcbuild(archive: false, 
+            workspace: "Emotion.xcworkspace",
+            scheme: "Emotion",
+            configuration: "Debug",
+            sdk: "iphonesimulator")
   end
 
 end

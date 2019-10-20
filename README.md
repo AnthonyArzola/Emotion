@@ -1,4 +1,4 @@
-CircleCI status: [![CircleCI](https://circleci.com/gh/AnthonyArzola/Emotion/tree/master.svg?style=svg)](https://circleci.com/gh/AnthonyArzola/Emotion/tree/master)
+**CircleCI Build Status**: [![CircleCI](https://circleci.com/gh/AnthonyArzola/Emotion/tree/master.svg?style=svg)](https://circleci.com/gh/AnthonyArzola/Emotion/tree/master)
 
 Emotion Sample
 ===========
