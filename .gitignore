@@ -3,6 +3,7 @@
 
 # Xcode build
 build/
+*.xcarchive/*
 
 # Xcode settings
 *.pbxuser
@@ -16,3 +17,9 @@ DerivedData/
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
 Pods/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output

@@ -7,6 +7,6 @@ target 'Emotion' do
 
   # Pods for Emotion
   pod 'PromiseKit', '~> 4.4'
-  pod 'Alamofire', '~> 4.5'
+  pod 'Alamofire', '4.8.0'
 
 end
