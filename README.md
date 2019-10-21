@@ -22,7 +22,7 @@ Sample Swift app that takes a picture, sends it to Microsoft's [Face API](https:
 ## CocoaPod referenced
 
 * [PromiseKit](https://cocoapods.org/pods/PromiseKit) ~> 4.4
-* [Alamofire](https://cocoapods.org/pods/Alamofire) ~> 4.5
+* [Alamofire](https://cocoapods.org/pods/Alamofire) = 4.8
 
 ## Features
 
