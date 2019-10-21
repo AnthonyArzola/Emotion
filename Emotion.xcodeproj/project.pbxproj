@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0ED778BED2C4F3BCE5813FA4 /* Pods_Emotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56C5F920CF2D6CC36E0E4FA /* Pods_Emotion.framework */; };
-		3E22814F203D616800C76813 /* Close.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E22814E203D616800C76813 /* Close.png */; };
 		3E24C18020392418004893AD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E24C17F20392418004893AD /* Images.xcassets */; };
 		3E3598102026F62F00E575C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E35980F2026F62F00E575C5 /* AppDelegate.swift */; };
 		3E3598122026F62F00E575C5 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3598112026F62F00E575C5 /* CameraViewController.swift */; };
 		3E3598152026F62F00E575C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E3598132026F62F00E575C5 /* Main.storyboard */; };
 		3E35981A2026F62F00E575C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E3598182026F62F00E575C5 /* LaunchScreen.storyboard */; };
-		3E3598232027EAC300E575C5 /* CameraButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E3598222027EAC300E575C5 /* CameraButton.png */; };
 		3E552A32203AC62B00463EFE /* TransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E552A31203AC62B00463EFE /* TransitionManager.swift */; };
 		3E552A34203ACB5500463EFE /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E552A33203ACB5500463EFE /* PresentationController.swift */; };
 		3E56301F2030239B0031382B /* Detect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E56301E2030239B0031382B /* Detect.swift */; };
@@ -25,7 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3E22814E203D616800C76813 /* Close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Close.png; sourceTree = "<group>"; };
 		3E24C17F20392418004893AD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3E35980C2026F62F00E575C5 /* Emotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E35980F2026F62F00E575C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +30,6 @@
 		3E3598142026F62F00E575C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E3598192026F62F00E575C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E35981B2026F62F00E575C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3E3598222027EAC300E575C5 /* CameraButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CameraButton.png; sourceTree = "<group>"; };
 		3E552A31203AC62B00463EFE /* TransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionManager.swift; sourceTree = "<group>"; };
 		3E552A33203ACB5500463EFE /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		3E56301E2030239B0031382B /* Detect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detect.swift; sourceTree = "<group>"; };
@@ -111,8 +107,6 @@
 		3E3598212027EA9500E575C5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				3E22814E203D616800C76813 /* Close.png */,
-				3E3598222027EAC300E575C5 /* CameraButton.png */,
 				3E24C17F20392418004893AD /* Images.xcassets */,
 			);
 			path = Images;
@@ -209,9 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E24C18020392418004893AD /* Images.xcassets in Resources */,
-				3E3598232027EAC300E575C5 /* CameraButton.png in Resources */,
 				3E35981A2026F62F00E575C5 /* LaunchScreen.storyboard in Resources */,
-				3E22814F203D616800C76813 /* Close.png in Resources */,
 				3E3598152026F62F00E575C5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,7 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -397,7 +389,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

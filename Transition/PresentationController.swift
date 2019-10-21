@@ -20,7 +20,7 @@ class PresentationController: UIPresentationController {
     
     // MARK: - UIPresentationController methods overridden
     override init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?) {
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.regular)
+        let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.regular)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
         
         super.init(presentedViewController: presentedViewController, presenting: presentingViewController)

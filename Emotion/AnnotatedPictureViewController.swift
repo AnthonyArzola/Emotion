@@ -60,17 +60,17 @@ class AnnotatedPictureViewController: UIViewController {
     @IBAction func panGestureRecognizerHandler(_ sender: UIPanGestureRecognizer) {
         let touchPoint = sender.location(in: self.view?.window)
         
-        if sender.state == UIGestureRecognizerState.began {
+        if sender.state == UIGestureRecognizer.State.began {
             initialTouchPoint = touchPoint
             
-        } else if sender.state == UIGestureRecognizerState.changed {
+        } else if sender.state == UIGestureRecognizer.State.changed {
             if touchPoint.y - initialTouchPoint.y > 0 {
                 self.view.frame = CGRect(x: 0,
                                          y: touchPoint.y - initialTouchPoint.y + 75,
                                          width: self.view.frame.size.width,
                                          height: self.view.frame.size.height)
             }
-        } else if sender.state == UIGestureRecognizerState.ended || sender.state == UIGestureRecognizerState.cancelled {
+        } else if sender.state == UIGestureRecognizer.State.ended || sender.state == UIGestureRecognizer.State.cancelled {
             if touchPoint.y - initialTouchPoint.y > 150 {
                 self.dismiss(animated: true, completion: nil)
             } else {
@@ -90,7 +90,7 @@ class AnnotatedPictureViewController: UIViewController {
         return Promise { fufill, reject in
             
             // API has restriction on image size, reduce quality/size
-            guard let data = UIImageJPEGRepresentation(image, 0.75) else {
+            guard let data = image.jpegData(compressionQuality: 0.75) else {
                 print("❗️ - Failed to convert UIImageview.image into image data.")
                 return
             }
@@ -112,6 +112,7 @@ class AnnotatedPictureViewController: UIViewController {
                                     }
                                     catch {
                                         print("❗️ - Unable to deserialize JSON. Error:\(error)")
+                                        reject(error)
                                     }
                                 case .failure(let error):
                                     reject(error)

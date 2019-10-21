@@ -19,26 +19,27 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pgS-UL-HnD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdX-du-Gy1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3G-Rg-ZhM" userLabel="TakePictureButton">
-                                <rect key="frame" x="151.5" y="563" width="72" height="72"/>
+                                <rect key="frame" x="151.5" y="571" width="72" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="1sz-bJ-146"/>
                                     <constraint firstAttribute="width" constant="72" id="rOE-He-73E"/>
                                 </constraints>
-                                <state key="normal" image="CameraButton.png"/>
+                                <state key="normal" image="camera_button"/>
                                 <connections>
                                     <action selector="onTakePictureTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M0G-dv-6J8"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="R3G-Rg-ZhM" secondAttribute="bottom" constant="32" id="6Au-th-u6W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="R3G-Rg-ZhM" secondAttribute="bottom" constant="24" id="6Au-th-u6W"/>
                             <constraint firstItem="qdX-du-Gy1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UWu-mm-ZYF"/>
                             <constraint firstItem="qdX-du-Gy1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="X2e-Db-JXC"/>
                             <constraint firstItem="qdX-du-Gy1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bVR-PX-FgX"/>
@@ -67,10 +68,6 @@
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u47-1Q-8mg">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="667" id="apO-0e-D8q"/>
-                                    <constraint firstAttribute="width" constant="375" id="gyl-0L-QF6"/>
-                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="FPP-a5-jV8" appends="YES" id="hda-ea-9k1"/>
                                 </connections>
@@ -83,7 +80,7 @@
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Close.png" translatesAutoresizingMaskIntoConstraints="NO" id="oB9-2K-0iY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="close_button" translatesAutoresizingMaskIntoConstraints="NO" id="oB9-2K-0iY">
                                 <rect key="frame" x="167" y="15" width="40" height="11"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -93,9 +90,9 @@
                             <constraint firstItem="QnH-Cj-ZFh" firstAttribute="trailing" secondItem="Ydw-4L-ED1" secondAttribute="trailing" constant="15" id="Xgv-U0-AQ1"/>
                             <constraint firstItem="u47-1Q-8mg" firstAttribute="bottom" secondItem="QnH-Cj-ZFh" secondAttribute="bottom" id="aKq-oE-CsH"/>
                             <constraint firstItem="QnH-Cj-ZFh" firstAttribute="bottom" secondItem="Ydw-4L-ED1" secondAttribute="bottom" constant="110" id="fPF-DK-qxz"/>
+                            <constraint firstItem="u47-1Q-8mg" firstAttribute="top" secondItem="QnH-Cj-ZFh" secondAttribute="top" id="fsg-yO-Tm1"/>
                             <constraint firstItem="u47-1Q-8mg" firstAttribute="trailing" secondItem="QnH-Cj-ZFh" secondAttribute="trailing" id="k3K-Jo-0kb"/>
                             <constraint firstItem="Ydw-4L-ED1" firstAttribute="leading" secondItem="QnH-Cj-ZFh" secondAttribute="leading" constant="15" id="nzy-B7-SEJ"/>
-                            <constraint firstItem="u47-1Q-8mg" firstAttribute="top" secondItem="694-OH-HUl" secondAttribute="top" id="s2S-Pg-TCZ"/>
                             <constraint firstItem="u47-1Q-8mg" firstAttribute="leading" secondItem="QnH-Cj-ZFh" secondAttribute="leading" id="sxk-mk-BHR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QnH-Cj-ZFh"/>
@@ -116,7 +113,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CameraButton.png" width="256" height="256"/>
-        <image name="Close.png" width="80" height="21"/>
+        <image name="camera_button" width="64" height="64"/>
+        <image name="close_button" width="32" height="8.5"/>
     </resources>
 </document>
