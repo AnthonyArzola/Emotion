@@ -40,7 +40,7 @@ class AnnotatedPictureViewController: UIViewController {
         self.pictureImageView.image = capturedImage
         
         // Send image to Emotion API
-        getEmotions(image: capturedImage).then { emotionalArray -> Void in
+        getEmotions(image: capturedImage).then { emotionalArray in
                 if (emotionalArray.count > 0) {
                     self.pictureImageView.image = self.addRectanglesToImage(image: capturedImage,
                                                                             emotions: emotionalArray)
