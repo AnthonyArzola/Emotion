@@ -6,7 +6,7 @@ target 'Emotion' do
   use_frameworks!
 
   # Pods for Emotion
-  pod 'PromiseKit', '~> 6.0'
+  pod 'PromiseKit', '6.8'
   pod 'Alamofire', '4.8.0'
 
 end

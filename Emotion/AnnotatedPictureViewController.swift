@@ -40,19 +40,16 @@ class AnnotatedPictureViewController: UIViewController {
         self.pictureImageView.image = capturedImage
         
         // Send image to Emotion API
-        getEmotions(image: capturedImage).then { emotionalArray in
-                if (emotionalArray.count > 0) {
-                    self.pictureImageView.image = self.addRectanglesToImage(image: capturedImage,
-                                                                            emotions: emotionalArray)
-                    
-                    self.addLabelsToView(view: self.pictureImageView,
-                                         emotions: emotionalArray)
-                } else {
-                    self.emotionLabel.isHidden = false
-                }
-            }.catch {error in
+        getEmotions(image: capturedImage).done { emotionalArray in
+            if (emotionalArray.count > 0) {
+                self.pictureImageView.image = self.addRectanglesToImage(image: capturedImage, emotions: emotionalArray)
+                self.addLabelsToView(view: self.pictureImageView, emotions: emotionalArray)
+            } else {
                 self.emotionLabel.isHidden = false
-                self.emotionLabel.text = error.localizedDescription
+            }
+        }.catch { error in
+            self.emotionLabel.isHidden = false
+            self.emotionLabel.text = error.localizedDescription
         }
     }
     
@@ -87,8 +84,7 @@ class AnnotatedPictureViewController: UIViewController {
     // MARK: - Private methods
     private func getEmotions(image: UIImage) -> Promise<[Detect]> {
         
-        return Promise { fufill, reject in
-            
+        return Promise { resolver in
             // API has restriction on image size, reduce quality/size
             guard let data = image.jpegData(compressionQuality: 0.75) else {
                 print("❗️ - Failed to convert UIImageview.image into image data.")
@@ -100,23 +96,20 @@ class AnnotatedPictureViewController: UIViewController {
                 "Ocp-Apim-Subscription-Key": COGNATIVE_SERVICE_API_KEY,
                 "Content-Type": CONTENT_TYPE_OCTET_STREAM]
             
-            Alamofire.upload(data,
-                             to: COGNATIVE_SERVICE_API_ENDPOINT + "?returnFaceAttributes=emotion",
-                             method: .post,
-                             headers: header).responseJSON { response in
-                                switch response.result {
-                                case .success:
-                                    do {
-                                        let emotionalArray = try JSONDecoder().decode([Detect].self, from: response.data!)
-                                        fufill(emotionalArray)
-                                    }
-                                    catch {
-                                        print("❗️ - Unable to deserialize JSON. Error:\(error)")
-                                        reject(error)
-                                    }
-                                case .failure(let error):
-                                    reject(error)
-                                }
+            Alamofire.upload(data, to: COGNATIVE_SERVICE_API_ENDPOINT + "?returnFaceAttributes=emotion", method: .post, headers: header).responseJSON { response in
+                switch response.result {
+                case .success:
+                    do {
+                        let emotionalArray = try JSONDecoder().decode([Detect].self, from: response.data!)
+                        resolver.fulfill(emotionalArray)
+                    }
+                    catch {
+                        print("❗️ - Unable to deserialize JSON. Error:\(error)")
+                        resolver.reject(error)
+                    }
+                case .failure(let error):
+                    resolver.reject(error)
+                }
             }
         }
     }
@@ -148,7 +141,6 @@ class AnnotatedPictureViewController: UIViewController {
     }
     
     private func addLabelsToView(view: UIView, emotions: [Detect]) {
-        
         for emotion in emotions {
             let emotionTuple = emotion.getProminetEmotionWithEmoji()
             
